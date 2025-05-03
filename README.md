@@ -1,2 +1,2 @@
 # Finger-Fury
-The finger tapping game that will change Joes life
+**TODO:** Create a proper README
