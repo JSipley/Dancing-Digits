@@ -6,24 +6,13 @@ public class ControlArrowBehavior : MonoBehaviour
 
     public bool IsActive
     {
-        get { return _isActive; }
-        set
-        {
-            _isActive = value;
-            SetActive(_isActive);
-        }
+        get => _isActive;
+        set => SetActive(value);
     }
     
     public void SetActive(bool isActive)
     {
-        if (isActive)
-        {
-            GetComponent<Renderer>().material.color = Color.yellow;
-            _isActive = true;
-        }
-        else
-        {
-            GetComponent<Renderer>().material.color = Color.white;
-        }
+        _isActive = isActive;
+        GetComponent<Renderer>().material.color = isActive ? Color.yellow : Color.white;
     }
 }

@@ -4,16 +4,25 @@ public class NoteBehavior : MonoBehaviour
 {
     public float speed = 2.5f;
     private bool _noteMissed = false;
-    void Start()
-    {
-    }
+
+    private const float OutOfBoundsY = 6f;
+    private const float FullHitCeiling = 0.2f;
+    private const float PartialHitCeiling = 0.5f;
 
     void Update()
     {
-        transform.position += Vector3.up * speed * Time.deltaTime;
+        MoveNote();
+        CheckOutOfBounds();
+    }
 
-        // Y postion 6 is out of bounds for camera FOV
-        if (transform.position.y > 6f)
+    private void MoveNote()
+    {
+        transform.position += Vector3.up * speed * Time.deltaTime;
+    }
+
+    private void CheckOutOfBounds()
+    {
+        if (transform.position.y > OutOfBoundsY)
         {
             Destroy(gameObject);
         }
@@ -42,8 +51,26 @@ public class NoteBehavior : MonoBehaviour
         }
         if (collision.gameObject.GetComponent<ControlArrowBehavior>().IsActive)
         {
+            float noteHitAccuracy = (collision.transform.position - transform.position).magnitude;
+            Debug.Log("Note Hit, Score: " + CalculateScore(noteHitAccuracy));
+
             Destroy(gameObject);
-            Debug.Log("HIT Note");
+        }
+    }
+
+    int CalculateScore(float accuracy)
+    {
+        if (accuracy <= FullHitCeiling)
+        {
+            return 100;
+        }
+        else if (accuracy <= PartialHitCeiling)
+        {
+            return 50;
+        }
+        else
+        {
+            return 0;
         }
     }
 }

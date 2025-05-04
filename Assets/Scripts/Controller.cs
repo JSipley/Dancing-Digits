@@ -8,11 +8,6 @@ public class Controller : MonoBehaviour
     public GameObject upArrow;
     public GameObject downArrow;
 
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
