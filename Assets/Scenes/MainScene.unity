@@ -562,7 +562,7 @@ GameObject:
   - component: {fileID: 2032540177}
   - component: {fileID: 2032540178}
   m_Layer: 0
-  m_Name: Gamepad
+  m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -617,11 +617,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2762601071091625126, guid: 3e1627c2c5aff854e8d91225ecbe6ac9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.22
+      value: -3.14
       objectReference: {fileID: 0}
     - target: {fileID: 2762601071091625126, guid: 3e1627c2c5aff854e8d91225ecbe6ac9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1
+      value: -4.26
       objectReference: {fileID: 0}
     - target: {fileID: 2762601071091625126, guid: 3e1627c2c5aff854e8d91225ecbe6ac9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -655,6 +655,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2894025095401150347, guid: 3e1627c2c5aff854e8d91225ecbe6ac9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894025095401150347, guid: 3e1627c2c5aff854e8d91225ecbe6ac9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.015686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894025095401150347, guid: 3e1627c2c5aff854e8d91225ecbe6ac9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894025095401150347, guid: 3e1627c2c5aff854e8d91225ecbe6ac9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -680,7 +696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d72c1ee27bf63843b23031e9fdb8b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
+  speed: 5
 --- !u!1001 &9071185218255809140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -689,6 +705,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2032540177}
     m_Modifications:
+    - target: {fileID: -5610374206249016514, guid: 6973f0b11b719d64f83aefa7e753c3cb, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5610374206249016514, guid: 6973f0b11b719d64f83aefa7e753c3cb, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5610374206249016514, guid: 6973f0b11b719d64f83aefa7e753c3cb, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5610374206249016514, guid: 6973f0b11b719d64f83aefa7e753c3cb, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5610374206249016514, guid: 6973f0b11b719d64f83aefa7e753c3cb, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2136407531501336718, guid: 6973f0b11b719d64f83aefa7e753c3cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.16
