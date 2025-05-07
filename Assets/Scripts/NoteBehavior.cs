@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class NoteBehavior : MonoBehaviour
 {
-    public float speed = 2.5f;
+    public float speed = 5.0f;
     private bool _noteMissed = false;
 
     private const float OutOfBoundsY = 6f;
