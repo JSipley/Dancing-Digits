@@ -1,3 +1,2 @@
-# Finger-Fury
+# Dancing-Digits
 **TODO:** Create a proper README
-Change game name to _Dancing Digits_?
